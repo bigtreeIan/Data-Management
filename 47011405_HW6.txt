@@ -1,0 +1,145 @@
+Execute:
+> SELECT  *  FROM  Chirp  WHERE  btag  LIKE  'real%'
+
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| btag      | cno      | date      | location_latitude      | location_longitude      | parrots_btag      | parrots_cno      | sentiment      | text      | time      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| realDonaldTrump | 0        | 2017-02-11 | -41.146717             | -82.341417              |                   |                  | -0.7           | A working dinner tonight with Prime Minister Abe of Japan and his representatives at the Winter White House (Mar-a-Lago). Very good talks! | 23:24:08  |
+| realDonaldTrump | 1        | 2017-02-11 | -35.196068             | 157.215185              |                   |                  | 1.0            | Played golf today with Prime Minister Abe of Japan and @TheBig_Easy Ernie Els and had a great time. Japan is very well represented! | 23:15:34  |
+| realDonaldTrump | 2        | 2017-02-11 | 88.592610              | 21.029995               |                   |                  | -0.5           | I am so proud of my daughter Ivanka. To be abused and treated so badly by the media and to still hold her head so high is truly wonderful! | 23:00:21  |
+| realDonaldTrump | 3        | 2017-02-11 | -48.244000             | -176.493445             |                   |                  | 0.6            | Having a great time hosting Prime Minister Shinzo Abe in the United States!  https://t.co/Fvjsac89qS  https://t.co/hKqbMB2aQ9 | 18:28:31  |
+| realDonaldTrump | 4        | 2017-02-11 | -75.600471             | -72.727224              |                   |                  | -1.0           | Melania and I are hosting Japanese Prime Minister Shinzo Abe and Mrs. Abe at Mar-a-Lago in Palm Beach Fla. They are a wonderful couple! | 13:33:53  |
+| realDonaldTrump | 5        | 2017-02-11 | 25.699397              | 45.490059               |                   |                  | -1.0           | ...design or negotiations yet. When I do just like with the F-35 FighterJet or the Air Force One Program price will come WAY DOWN! | 13:24:32  |
+| realDonaldTrump | 6        | 2017-02-11 | 63.599641              | 115.578561              |                   |                  | 0.0            | I am reading that the great border WALL will cost more than the government originally thought but I have not gotten involved in the..... | 13:18:43  |
+| realDonaldTrump | 7        | 2017-02-11 | -26.530101             | 62.574579               |                   |                  | -0.1           | Our legal system is broken! 77% of refugees allowed into U.S. since travel reprieve hail from seven suspect countries. (WT)  SO DANGEROUS! | 12:12:51  |
+| realDonaldTrump | 8        | 2017-02-10 | -10.020575             | 82.154941               |                   |                  | -0.6           | Heading to Joint Base Andrews on #MarineOne with Prime Minister Shinz  earlier today. https://t.co/4JFhyYdeHO | 23:24:51  |
+| realDonaldTrump | 9        | 2017-02-10 | -56.831282             | 171.545045              |                   |                  | -0.3           | The failing @nytimes does major FAKE NEWS China story saying Mr.Xi has not spoken to Mr. Trump since Nov.14. We spoke at length yesterday! | 13:35:50  |
+| realDonaldTrump | 10       | 2017-02-28 | 0.000000               | 0.000000                |                   |                  | 1.0            | Russia is our new best friend! | 16:46:34  |
+| NULL      | NULL     | NULL      | NULL                   | NULL                    | NULL              | NULL             | NULL           | NULL      | NULL      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+12 rows
+
+Execute:
+> SELECT * FROM Chirp WHERE btag = 'swolf'
+
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| btag      | cno      | date      | location_latitude      | location_longitude      | parrots_btag      | parrots_cno      | sentiment      | text      | time      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| swolf     | 0        | 2017-02-13 | 61.911844              | -60.986028              | realDonaldTrump   | 3                | -0.9           | Just got iPhone this morning. hate the screen. it is just terrible | 13:47:06  |
+| swolf     | 1        | 2017-02-22 | -63.212492             | 56.190118               | realDonaldTrump   | 7                | -0.5           | Trying to connect from New York. hate Verizon. my service is just bad | 15:20:24  |
+| swolf     | 2        | 2017-02-17 | 0.899945               | 144.392572              | realDonaldTrump   | 0                | -0.2           | Texting from San Francisco. dislike Verizon. the coverage is just awful | 12:20:37  |
+| swolf     | 3        | 2017-02-20 | 13.297046              | 64.285689               | realDonaldTrump   | 1                | 0.2            | Making call from San Francisco. love AT&T. the coverage is just amazing | 20:24:17  |
+| swolf     | 4        | 2017-02-20 | 46.412349              | 176.591723              | realDonaldTrump   | 4                | 0.3            | Using iPhone today. like the size. it is just good | 02:33:30  |
+| swolf     | 5        | 2017-02-17 | 73.040531              | -105.802261             | realDonaldTrump   | 8                | -0.7           | Just got iPhone tonight. dislike the screen. it is just awful | 09:55:40  |
+| swolf     | 6        | 2017-02-28 | 0.000000               | 0.000000                | realDonaldTrump   | 10               | 1.0            | Russia is our new best friend! | 16:46:34  |
+| NULL      | NULL     | NULL      | NULL                   | NULL                    | NULL              | NULL             | NULL           | NULL      | NULL      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+8 rows
+
+Execute:
+> SELECT *
+FROM Ad A
+WHERE A.wtag = 'burtonangel'
+
++ -------- + ------------ + ------------ + --------- +
+| aid      | caption      | picture      | wtag      |
++ -------- + ------------ + ------------ + --------- +
+| NULL     | NULL         | NULL         | NULL      |
++ -------- + ------------ + ------------ + --------- +
+1 rows
+
+Execute:
+> SELECT * 
+FROM User u
+WHERE tag = 'amandaclark'
+
++ -------- + ---------- + ------------- + ---------------- + ------------------- + ------------------- + ----------------- + ------------------ + -------------------- + --------------------- +
+| tag      | email      | password      | signup_date      | address_number      | address_street      | address_city      | address_state      | address_country      | address_mailcode      |
++ -------- + ---------- + ------------- + ---------------- + ------------------- + ------------------- + ----------------- + ------------------ + -------------------- + --------------------- +
+| NULL     | NULL       | NULL          | NULL             | NULL                | NULL                | NULL              | NULL               | NULL                 | NULL                  |
++ -------- + ---------- + ------------- + ---------------- + ------------------- + ------------------- + ----------------- + ------------------ + -------------------- + --------------------- +
+1 rows
+
+Execute:
+> SELECT v.btag, 
+	   v.email, 
+	   v.age, 
+       v.number_of_chirp, 
+       v.max_sentiment, 
+       v.min_sentiment, 
+       v.average_sentiment, 
+       v.starting_date, 
+       v.ending_date
+FROM parrotstatistics v
+ORDER BY v.average_sentiment desc
+LIMIT 3
+
++ --------- + ---------- + -------- + -------------------- + ------------------ + ------------------ + ---------------------- + ------------------ + ---------------- +
+| btag      | email      | age      | number_of_chirp      | max_sentiment      | min_sentiment      | average_sentiment      | starting_date      | ending_date      |
++ --------- + ---------- + -------- + -------------------- + ------------------ + ------------------ + ---------------------- + ------------------ + ---------------- +
+| kaisercurtis | kaisercurtis@moore-hurst.org | 29       | 2                    | 0.6                | 0.5                | 0.55000                | 2015-04-26         | 2017-02-22       |
+| dfowler   | dfowler@brady.com | 35       | 7                    | 1.0                | -0.6               | 0.41429                | 2012-10-30         | 2017-02-21       |
+| qsanchez  | qsanchez@lee.org | 48       | 11                   | 0.9                | -0.6               | 0.31818                | 2006-02-27         | 2017-02-18       |
++ --------- + ---------- + -------- + -------------------- + ------------------ + ------------------ + ---------------------- + ------------------ + ---------------- +
+3 rows
+
+Execute:
+> SELECT * FROM Chirp WHERE btag = 'realDonaldTrump'
+
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| btag      | cno      | date      | location_latitude      | location_longitude      | parrots_btag      | parrots_cno      | sentiment      | text      | time      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| realDonaldTrump | 0        | 2017-02-11 | -41.146717             | -82.341417              |                   |                  | -0.7           | A working dinner tonight with Prime Minister Abe of Japan and his representatives at the Winter White House (Mar-a-Lago). Very good talks! | 23:24:08  |
+| realDonaldTrump | 1        | 2017-02-11 | -35.196068             | 157.215185              |                   |                  | 1.0            | Played golf today with Prime Minister Abe of Japan and @TheBig_Easy Ernie Els and had a great time. Japan is very well represented! | 23:15:34  |
+| realDonaldTrump | 2        | 2017-02-11 | 88.592610              | 21.029995               |                   |                  | -0.5           | I am so proud of my daughter Ivanka. To be abused and treated so badly by the media and to still hold her head so high is truly wonderful! | 23:00:21  |
+| realDonaldTrump | 3        | 2017-02-11 | -48.244000             | -176.493445             |                   |                  | 0.6            | Having a great time hosting Prime Minister Shinzo Abe in the United States!  https://t.co/Fvjsac89qS  https://t.co/hKqbMB2aQ9 | 18:28:31  |
+| realDonaldTrump | 4        | 2017-02-11 | -75.600471             | -72.727224              |                   |                  | -1.0           | Melania and I are hosting Japanese Prime Minister Shinzo Abe and Mrs. Abe at Mar-a-Lago in Palm Beach Fla. They are a wonderful couple! | 13:33:53  |
+| realDonaldTrump | 5        | 2017-02-11 | 25.699397              | 45.490059               |                   |                  | -1.0           | ...design or negotiations yet. When I do just like with the F-35 FighterJet or the Air Force One Program price will come WAY DOWN! | 13:24:32  |
+| realDonaldTrump | 6        | 2017-02-11 | 63.599641              | 115.578561              |                   |                  | 0.0            | I am reading that the great border WALL will cost more than the government originally thought but I have not gotten involved in the..... | 13:18:43  |
+| realDonaldTrump | 7        | 2017-02-11 | -26.530101             | 62.574579               |                   |                  | -0.1           | Our legal system is broken! 77% of refugees allowed into U.S. since travel reprieve hail from seven suspect countries. (WT)  SO DANGEROUS! | 12:12:51  |
+| realDonaldTrump | 8        | 2017-02-10 | -10.020575             | 82.154941               |                   |                  | -0.6           | Heading to Joint Base Andrews on #MarineOne with Prime Minister Shinz  earlier today. https://t.co/4JFhyYdeHO | 23:24:51  |
+| realDonaldTrump | 9        | 2017-02-10 | -56.831282             | 171.545045              |                   |                  | -0.3           | The failing @nytimes does major FAKE NEWS China story saying Mr.Xi has not spoken to Mr. Trump since Nov.14. We spoke at length yesterday! | 13:35:50  |
+| realDonaldTrump | 10       | 2017-02-28 | 0.000000               | 0.000000                |                   |                  | 1.0            | Russia is our new best friend! | 16:46:34  |
+| realDonaldTrump | 11       | 2017-02-28 | 0.000000               | 0.000000                |                   |                  | -0.7           | A working dinner tonight with Prime Minister Abe of Japan and his representatives at the Winter White House (Mar-a-Lago). Very good talks! | 16:46:35  |
+| NULL      | NULL     | NULL      | NULL                   | NULL                    | NULL              | NULL             | NULL           | NULL      | NULL      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+13 rows
+
+Execute:
+> SELECT * FROM Chirp WHERE btag = 'HillaryClinton'
+
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| btag      | cno      | date      | location_latitude      | location_longitude      | parrots_btag      | parrots_cno      | sentiment      | text      | time      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| HillaryClinton | 0        | 2017-02-10 | -85.889273             | 42.349669               |                   |                  | -1.0           | 3-0       | 00:17:59  |
+| HillaryClinton | 1        | 2017-02-08 | -26.556223             | 108.269651              |                   |                  | -1.0           | She was warned. She was given an explanation. Nevertheless she persisted.  So must we all.  https://t.co/JXROGHPNkH | 18:18:13  |
+| HillaryClinton | 2        | 2017-02-06 | -64.142955             | 140.729018              |                   |                  | 0.9            | I'm one of 100 million #SuperBowl fans that just went #Gaga for the Lady &amp; her message to all of us. https://t.co/8AoNqjwr1b | 02:17:33  |
+| HillaryClinton | 3        | 2017-02-03 | -89.420443             | 84.675435               |                   |                  | 0.7            | At 103 Ruline Steininger had an energy &amp; vibrancy all should aspire to. My thoughts &amp; prayers are w/ her family. https://t.co/LQ1qozY3NH | 23:49:13  |
+| HillaryClinton | 4        | 2017-01-31 | 36.623734              | 2.645112                |                   |                  | 0.8            | What I'm thinking about today:  Khizr Khan: https://t.co/wrHK7IkBrG  And a vet who fought with those now excluded: https://t.co/4LhNIT8xVo | 19:27:20  |
+| HillaryClinton | 5        | 2017-01-29 | -58.592107             | -42.425040              |                   |                  | 0.1            | I stand with the people gathered across the country tonight defending our values &amp; our Constitution. This is not who we are. | 03:49:45  |
+| HillaryClinton | 6        | 2017-01-23 | -9.602473              | -103.472047             |                   |                  | -0.6           | .@MichaelNutter got a lot of great points into 140 characters here. We have to keep the momentum. https://t.co/Bd66lBPMEs | 00:20:14  |
+| HillaryClinton | 7        | 2017-01-23 | -61.022737             | 123.280674              |                   |                  | -1.0           | Scrolling through images of the #womensmarch is awe-inspiring. Hope it brought joy to others as it did to me. https://t.co/29oaMvk3hU | 00:18:36  |
+| HillaryClinton | 8        | 2017-01-21 | 8.927851               | -82.514150              |                   |                  | 1.0            | I stand w/ Nora Harren a 17-year  from Boise ID &amp; every person marching for our values today. Onward!   https://t.co/Zt8THPtAn8 | 20:27:17  |
+| HillaryClinton | 9        | 2017-01-21 | 22.575574              | 47.864105               |                   |                  | -1.0           | 'Hope Not Fear' Indeed.  And what a beautiful piece by Louisa Cannell.  #womensmarch   https://t.co/7h3Bzx79nB | 16:39:53  |
+| HillaryClinton | 10       | 2017-02-28 | 0.000000               | 0.000000                | realDonaldTrump   | 7                | -0.1           | -0.1      | 16:46:35  |
+| NULL      | NULL     | NULL      | NULL                   | NULL                    | NULL              | NULL             | NULL           | NULL      | NULL      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+12 rows
+
+Execute:
+> SELECT * FROM Chirp WHERE btag = 'austin73'
+
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| btag      | cno      | date      | location_latitude      | location_longitude      | parrots_btag      | parrots_cno      | sentiment      | text      | time      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+| austin73  | 0        | 2017-02-22 | -4.679163              | 122.705400              | HillaryClinton    | 8                | 0.3            | Playing with Surface today. love the size. it is awesome | 05:39:36  |
+| austin73  | 1        | 2017-02-13 | -28.142713             | -7.528853               | HillaryClinton    | 9                | 0.9            | Checking Nexus today. like its size. it is just good | 07:05:08  |
+| austin73  | 2        | 2017-02-14 | -13.223642             | -71.314878              | HillaryClinton    | 7                | 0.1            | Using Nexus this morning. love the size. it is just amazing | 18:44:13  |
+| austin73  | 3        | 2017-02-15 | 70.991961              | 151.087984              | HillaryClinton    | 3                | -0.5           | Using iPad tonight. hate the camera. it is just bad | 21:43:38  |
+| austin73  | 4        | 2017-02-16 | -22.397158             | 170.841788              | HillaryClinton    | 2                | -1.0           | Playing with Nexus tonight. hate the size. it is terrible | 21:29:25  |
+| austin73  | 5        | 2017-02-15 | -78.149759             | -149.518956             | HillaryClinton    | 6                | 1.0            | Browsing from Los Angeles. love T-Mobile. my speed is really good | 05:59:15  |
+| austin73  | 6        | 2017-02-28 | 0.000000               | 0.000000                | HillaryClinton    | 8                | 0.3            | Playing with Surface today. love the size. it is awesome | 16:46:35  |
+| NULL      | NULL     | NULL      | NULL                   | NULL                    | NULL              | NULL             | NULL           | NULL      | NULL      |
++ --------- + -------- + --------- + ---------------------- + ----------------------- + ----------------- + ---------------- + -------------- + --------- + --------- +
+8 rows
+

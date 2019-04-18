@@ -1,0 +1,92 @@
+DROP DATAVERSE TopicalBird IF EXISTS;
+CREATE DATAVERSE TopicalBird;
+USE TopicalBird;
+
+CREATE TYPE AddressType AS {
+	country: string?,
+	number: string?,
+	mailcode: string?,
+	street: string?,
+	state: string?,
+	city: string?
+}
+
+CREATE TYPE NameType AS {
+	first_name: string?,
+	last_name: string?
+}
+
+
+CREATE TYPE TopicListenType AS {
+	utag: string,
+	tid: int
+}
+
+CREATE TYPE BirdListenType AS {
+	utag: string,
+	btag: string
+}
+
+CREATE TYPE BirdType AS {
+	btag: string,
+	email: string?,
+	password: string?,
+	address: AddressType,
+	signup_date: datetime?,
+	name: NameType,
+	gender: string?,
+	birth_date: datetime?,
+	income: double?,
+	variety: [string]?
+};
+
+
+CREATE TYPE WatcherType as {
+	wtag: string,
+	email: string?,
+	password: string?,
+	address: AddressType,
+	signup_date: datetime?,
+	fdate: datetime?,
+	bsector: string?,
+	bname: string?,
+	fee: double?
+}
+
+CREATE TYPE AdType AS {
+	aid: int,
+	caption: string?,
+	picture: string?,
+	wtag: string
+}
+
+CREATE TYPE TopicType AS {
+	tid: int,
+	name: string?,
+	description: string?
+}
+
+
+CREATE TYPE ChirpType AS {
+	btag: string,
+	cno: int,
+	location: point?,
+	text: string?,
+	date_time: datetime?,
+	sentiment: double?,
+	about: [int]
+}
+
+CREATE TYPE InterestType AS {
+	utag: string,
+	id: int,
+	level: int
+}
+
+CREATE DATASET Chirps(ChirpType) PRIMARY KEY btag, cno;
+CREATE DATASET Topics(TopicType) PRIMARY KEY tid;
+CREATE DATASET Watchers(WatcherType) PRIMARY KEY wtag;
+CREATE DATASET Birds(BirdType) PRIMARY KEY btag;
+CREATE DATASET Ads(AdType) PRIMARY KEY aid;
+CREATE DATASET BirdListen(BirdListenType) PRIMARY KEY utag, btag;
+CREATE DATASET TopicListen(TopicListenType) PRIMARY KEY utag, tid;
